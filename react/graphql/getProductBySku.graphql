@@ -1,0 +1,17 @@
+query($sku: ID!){
+    product(identifier: {field: sku, value: $sku}) {
+        productId
+        productName
+        description
+				priceRange {
+          sellingPrice {
+            highPrice
+          } 
+        }
+    items{
+      images {
+        imageUrl
+      }
+    }
+    }
+}
